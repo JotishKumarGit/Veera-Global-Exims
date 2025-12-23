@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- gallery css -->
+    <style>
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 24px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 12px;
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .gallery-item:hover .gallery-icon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        .gallery-item img {
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid  top-bar wow fadeIn" data-wow-delay="0.1s" style="background-color: #13153e;">
+        <div class="row align-items-center h-100">
+            <div class="col-lg-4 text-center text-lg-start">
+                <!-- <a href="index.html">
+                    <h1 class="display-5 text-primary m-0">Charitize</h1>
+                </a> -->
+                <a href="index.html">
+                    <h1 class="display-5 text-primary m-0"><img src="./img/veera_logo.jpeg" height="140px" width="100%"
+                            alt=""></h1>
+                </a>
+
+            </div>
+            <div class="col-lg-8 d-none d-lg-block">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="d-flex justify-content-end">
+                            <div class="flex-shrink-0 btn-square " style="background-color: #4169E1; color: white;">
+                                <i class="fa fa-phone-alt"></i>
+                            </div>
+                            <div class="ms-2">
+                                <h6 class="mb-0" style="color: #D4AF37;">Call Us</h6>
+                                <span class="text-white">+91 9819544552 | 9819355315</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="d-flex justify-content-end">
+                            <div class="flex-shrink-0 btn-square " style="background-color: #4169E1; color: white;">
+                                <i class="fa fa-envelope-open "></i>
+                            </div>
+                            <div class="ms-2">
+                                <h6 class=" mb-0" style="color: #D4AF37;">Mail Us</h6>
+                                <span class="text-white">nveera1981@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-lg-4">
+                        <div class="d-flex justify-content-end">
+                            <div class="flex-shrink-0 btn-square bg-primary">
+                                <i class="fa fa-map-marker-alt text-dark"></i>
+                            </div>
+                            <div class="ms-2">
+                                <h6 class="text-primary mb-0">Address</h6>
+                                <span class="text-white">701/702, SILVER AVENUE, DEVI DAYAL ROAD, BPS PLAZA COMPOUND,
+                                    NEAR DEVI DAYAL BEST BUS DEPOT.
+                                    MULUND -WEST, MUMBAI - 400080</span>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="nav-bar">
+            <nav class="navbar navbar-expand-lg  navbar-dark px-4 py-lg-0" style="background-color: #D4AF37;">
+                <h4 class="d-lg-none m-0">Menu</h4>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav me-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="products.html" class="nav-item nav-link">Products</a>
+                        <!-- <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
+                            <div class="dropdown-menu bg-light m-0">
+                                <a href="#" class="dropdown-item">Ginger</a>
+                                <a href="#" class="dropdown-item">Mango</a>
+                                <a href="#" class="dropdown-item">Banana</a>
+                                <a href="#" class="dropdown-item">Pomegranate</a>
+                                <a href="#" class="dropdown-item">Papaya</a>
+                                <a href="#" class="dropdown-item">Turmeric Powder</a>
+                                <a href="#" class="dropdown-item">Chilli Powder</a>
+                                <a href="#" class="dropdown-item">Clove</a>
+                                <a href="#" class="dropdown-item">Coriander</a>
+                                <a href="#" class="dropdown-item">Vegetables</a>
+                                <a href="#" class="dropdown-item">Onion</a>
+                                <a href="#" class="dropdown-item">Potato</a>
+                                <a href="#" class="dropdown-item">Tomato</a>
+                                <a href="#" class="dropdown-item">Cumin Seeds</a>
+                                <a href="#" class="dropdown-item">Black Pepper</a>
+                                <a href="#" class="dropdown-item">Cardamom</a>
+                            </div>
+
+                        </div> -->
+                        <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-none d-lg-flex ms-auto">
+                        <a class="btn btn-square btn-dark ms-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-dark ms-2" href=""><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="owl-carousel header-carousel py-5">
+            <!-- Slide 1: Fruits -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Fresh Fruits for Healthy Lives</h1>
+                            <p class="fs-5 mb-5">We provide fresh and nutritious fruits to communities to promote
+                                health, energy, and wellness.</p>
+                            <div class="d-flex">
+                                <a class="btn  py-3 px-4 me-3" href=""
+                                    style="background-color: #D4AF37; color: white;">Explore Our Products</a>
+                                <a class="btn  py-3 px-4" href="" data-bs-toggle="modal" data-bs-target="#enquiryModal"
+                                    style="background-color: #4169E1; color: white;">Call To Action</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/fruits.jpg"
+                                style="border-radius: 20px; border: 2px solid white;" alt="Fruits Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Vegetables -->
+            <div class="container py-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <div class="carousel-text">
+                            <h1 class="display-1 text-uppercase mb-3">Nutritious Vegetables for All</h1>
+                            <p class="fs-5 mb-5">Providing fresh vegetables to families ensures healthy meals and a
+                                sustainable future for our communities.</p>
+                            <div class="d-flex">
+                                <a class="btn  py-3 px-4 me-3" href=""
+                                    style="background-color: #D4AF37; color: white;">Explore Our Products</a>
+                                <a class="btn  py-3 px-4" href="" data-bs-toggle="modal" data-bs-target="#enquiryModal"
+                                    style="background-color: #4169E1; color: white;">Call To Action</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="carousel-img">
+                            <img class="w-100" src="img/vegetables.jpg"
+                                style="border-radius: 20px; border: 2px solid white;" alt="Vegetables Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Short desc for pro -->
+    <div class="container-fluid  mb-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #D4AF37;">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-lg-11">
+                    <div class="h-100 py-5 d-flex align-items-center">
+                        <button type="button" class="btn-play" data-bs-toggle="modal"
+                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            <span></span>
+                        </button>
+                        <h3 class="ms-5 mb-0 d-none d-md-block">
+                            At <strong>Veera Global Exim</strong>, we bring the finest fruits, fresh vegetables, and
+                            premium spices from farm to table, ensuring quality and freshness for every home.
+                        </h3>
+                        <h4 class="ms-5 mb-0">
+                            At <strong>Veera Global Exim</strong>, We source, verify, and deliver high-quality Indian
+                            products to domestic & international markets with transparency, consistency, and
+                            professionalism.
+                            </h3>
+                    </div>
+                </div>
+                <div class="d-none d-lg-block col-lg-1">
+                    <div class="h-100 w-100 bg-secondary d-flex align-items-center justify-content-center">
+                        <span class="text-white" style="transform: rotate(-90deg);">Scroll Down</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Short desc for pro -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="about-img">
+                        <img class="img-fluid w-100" src="img/fruits.jpg" alt="VEERA GLOBAL EXIM">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <p class="section-title bg-white text-start text-primary pe-3">About Us</p>
+                    <h1 class="display-6 mb-4 wow fadeIn" data-wow-delay="0.2s">3+ Years Experience</h1>
+                    <h3 class="display-6 mb-4 wow fadeIn " style="color: #D4AF37;" data-wow-delay="0.2s">A Globally
+                        Trusted Export–Import & Sourcing Company</h1>
+                        <p class="mb-4 wow fadeIn" data-wow-delay="0.3s"><strong>About VEERA GLOBAL EXIM</strong><br>
+                            We Deliver The Best Quality Products Globally. With over 3 years of excellence in the export
+                            industry, VEERA GLOBAL EXIM has established itself as a trusted name in providing premium
+                            quality spices and fresh vegetables to clients worldwide. Our commitment to quality and
+                            customer
+                            satisfaction has made us a preferred choice for importers across 50+ countries.</p>
+                        <p class="mb-4 wow fadeIn" data-wow-delay="0.3s">We are
+                            is a professionally managed Export–Import, Domestic Trading & Global
+                            Sourcing Company delivering premium-quality products across India and international markets.
+                        </p>
+                        <div class="row g-4 pt-2">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                                <div class="h-100">
+                                    <h3>Quality Assurance</h3>
+                                    <p>100% certified and tested products meeting international standards.</p>
+                                    <h3>Timely Delivery</h3>
+                                    <p>Fast and reliable shipping to your doorstep anywhere in the world.</p>
+                                    <h3>Expert Team</h3>
+                                    <p>Dedicated professionals ensuring best service and support.</p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="h-100  p-4 text-center" style="background-color: #D4AF37;">
+                                    <p class="fs-5 text-dark">Learn more about our services or get in touch with us to
+                                        start
+                                        your order today.</p>
+                                    <a class="btn btn-secondary py-2 px-4" href="">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+    <!-- our mission and vission  -->
+
+    <style>
+        .card-custom {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            min-height: 400px;
+            /* Equal height for all cards */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffffff, #f1f5f9);
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-icon {
+            font-size: 50px;
+            color: #D4AF37;
+            margin-bottom: 15px;
+        }
+
+        .core-values .badge {
+            font-size: 1rem;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 50px;
+            background: #D4AF37;
+            color: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .core-values .badge:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul li::before {
+            content: "✔";
+            color: #00b894;
+            margin-right: 10px;
+        }
+    </style>
+
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Vision Card -->
+            <div class="col-md-4">
+                <div class="card card-custom text-center">
+                    <div class="card-icon"><i class="bi bi-eye-fill"></i></div>
+                    <h5 class="card-title">Our Vision</h5>
+                    <p class="card-text">To become a globally recognized and trustworthy trade partner connecting
+                        India’s quality to the world.</p>
+                    <p class="card-text">Our mission is to deliver exceptional products and services that uphold India’s
+                        reputation for excellence, fostering long-term partnerships built on reliability, integrity, and
+                        mutual growth.</p>
+
+                </div>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="col-md-4">
+                <div class="card card-custom text-center">
+                    <div class="card-icon"><i class="bi bi-briefcase-fill"></i></div>
+                    <h5 class="card-title">Our Mission</h5>
+                    <ul class="list-unstyled mt-3 mb-0 text-start">
+                        <li>Deliver quality-certified products</li>
+                        <li>Build long-term international partnerships</li>
+                        <li>Maintain transparency, ethics & timely service</li>
+                        <li>Provide end-to-end sourcing & supply chain solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Core Values Card -->
+            <div class="col-md-4">
+                <div class="card card-custom text-center">
+                    <div class="card-icon"><i class="bi bi-stars"></i></div>
+                    <h5 class="card-title">Core Values</h5>
+                    <div class="core-values d-flex flex-wrap justify-content-center mt-3">
+                        <span class="badge">Integrity</span>
+                        <span class="badge">Quality</span>
+                        <span class="badge">Transparency</span>
+                        <span class="badge">Timely Delivery</span>
+                        <span class="badge">Customer Commitment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- products sections -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="section-title bg-white text-center text-primary px-3">Our Products</p>
+                <h1 class="display-6 mb-4">Explore Our Premium Products</h1>
+            </div>
+
+            <!-- Fruits Section -->
+            <div class="mb-5">
+                <h2 class="mb-4 text-center">Fruits</h2>
+                <div class="row g-4 justify-content-center align-items-center text-center">
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Mango.jpg" height="250px" width="100%" class="card-img-top" alt="Mango">
+                            <div class="card-body">
+                                <h5 class="card-title">Mango</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/banana.jpg" height="250px" width="100%" class="card-img-top" alt="Banana">
+                            <div class="card-body">
+                                <h5 class="card-title">Banana</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Pomegranate.jpg" height="250px" width="100%" class="card-img-top"
+                                alt="Pomegranate">
+                            <div class="card-body">
+                                <h5 class="card-title">Pomegranate</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Papaya.jpg" height="250px" width="100%" class="card-img-top" alt="Papaya">
+                            <div class="card-body">
+                                <h5 class="card-title">Papaya</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Spices Section -->
+            <div class="mb-5">
+                <h2 class="mb-4 text-center">Spices</h2>
+                <div class="row g-4 justify-content-center align-items-center text-center">
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Green_Cardamom.jpg" height="250px" width="100%" class="card-img-top"
+                                alt="Cardamom">
+                            <div class="card-body">
+                                <h5 class="card-title">Green Cardamom</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Black_pepper.jpg" height="250px" width="100%" class="card-img-top"
+                                alt="Black Pepper">
+                            <div class="card-body">
+                                <h5 class="card-title">Black Pepper</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Cumin_Seeds.webp" height="250px" width="100%" class="card-img-top"
+                                alt="Cumin Seeds">
+                            <div class="card-body">
+                                <h5 class="card-title">Cumin Seeds</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Turmeric_Powder.jpg" height="250px" width="100%" class="card-img-top"
+                                alt="Turmeric Powder">
+                            <div class="card-body">
+                                <h5 class="card-title">Turmeric Powder</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.5s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Chilli_Powder.jpg" height="250px" width="100%" class="card-img-top"
+                                alt="Chilli Powder">
+                            <div class="card-body">
+                                <h5 class="card-title">Chilli Powder</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.6s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Clove.jpg" height="250px" width="100%" class="card-img-top" alt="Clove">
+                            <div class="card-body">
+                                <h5 class="card-title">Clove</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.7s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Coriander.jpg" height="250px" width="100%" class="card-img-top"
+                                alt="Coriander">
+                            <div class="card-body">
+                                <h5 class="card-title">Coriander</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vegetables Section -->
+            <div class="mb-5">
+                <h2 class="mb-4 text-center">Vegetables</h2>
+                <div class="row g-4">
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Onion.png" height="250px" width="100%" class="card-img-top" alt="Onion">
+                            <div class="card-body">
+                                <h5 class="card-title">Onion</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.2s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Potato.jpg" height="250px" width="100%" class="card-img-top" alt="Potato">
+                            <div class="card-body">
+                                <h5 class="card-title">Potato</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.3s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/Tomato.jpg" height="250px" width="100%" class="card-img-top" alt="Tomato">
+                            <div class="card-body">
+                                <h5 class="card-title">Tomato</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 wow fadeIn" data-wow-delay="0.4s">
+                        <div class="card h-100 text-center p-3">
+                            <img src="img/ginger-paste.jpg" height="250px" width="100%" class="card-img-top"
+                                alt="Ginger">
+                            <div class="card-body">
+                                <h5 class="card-title">Ginger</h5>
+                                <a href="#" style="background-color: #D4AF37; color: white;" class="btn  mt-2">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- products sections  -->
+
+    <!-- Why Chose Us -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="section-title bg-white text-center text-primary px-3">Why Choose Us</p>
+                <h1 class="display-6 mb-4">Reliable. Transparent. Globally Preferred.</h1>
+                <p class="mb-5 wow fadeIn" data-wow-delay="0.2s">
+                    ✔ Verified & Trusted Supplier Network<br>
+                    ✔ Multi-Level Quality Checks<br>
+                    ✔ Professional Export Documentation<br>
+                    ✔ Competitive Pricing & Strong Negotiation Ability<br>
+                    ✔ PAN India Sourcing Capabilities<br>
+                    ✔ Worldwide Shipping Support<br>
+                    ✔ Ethical & Transparent Business Culture
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="text-center p-4 border rounded h-100" style="background-color: #D4AF37; color: white;">
+                        <i class="fa fa-check-circle fa-3x mb-3"></i>
+                        <h5 class="mb-2">Verified & Trusted</h5>
+                        <p class="mb-0">Supplier network you can rely on for quality and transparency</p>
+                    </div>
+                </div>
+                <div class="col-md-3 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="text-center p-4 border rounded h-100" style="background-color: #D4AF37; color: white;">
+                        <i class="fa fa-shield-alt fa-3x mb-3"></i>
+                        <h5 class="mb-2">Multi-Level Quality Checks</h5>
+                        <p class="mb-0">Rigorous checks at every stage ensure top-notch standards</p>
+                    </div>
+                </div>
+                <div class="col-md-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="text-center p-4 border rounded h-100" style="background-color: #D4AF37; color: white;">
+                        <i class="fa fa-globe fa-3x mb-3"></i>
+                        <h5 class="mb-2">Global & PAN India Support</h5>
+                        <p class="mb-0">Sourcing across India and worldwide shipping support</p>
+                    </div>
+                </div>
+                <div class="col-md-3 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="text-center p-4 border rounded h-100" style="background-color: #D4AF37; color: white;">
+                        <i class="fa fa-handshake fa-3x mb-3"></i>
+                        <h5 class="mb-2">Ethical & Competitive</h5>
+                        <p class="mb-0">Transparent business culture with strong pricing negotiation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Chose Us -->
+
+    <!-- Gallery Section End -->
+    <div class="container-fluid py-5" style="background-color: #D4AF37;">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="section-title bg-white text-center text-primary px-3">Gallery</p>
+                <h1 class="display-6 mb-4">Our Product Gallery</h1>
+            </div>
+
+            <div class="row g-4 justify-content-center align-items-center text-center">
+                <!-- First Row -->
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/vegetables.jpg" class="img-fluid w-100" alt="Vegetables">
+                        <a href="img/vegetables.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.2s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Turmeric_Powder.jpg" class="img-fluid w-100" alt="Turmeric Powder">
+                        <a href="img/Turmeric_Powder.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Tomato.jpg" class="img-fluid w-100" alt="Tomato">
+                        <a href="img/Tomato.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.4s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Potato.jpg" class="img-fluid w-100" alt="Potato">
+                        <a href="img/Potato.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Pomegranate.jpg" class="img-fluid w-100" alt="Pomegranate">
+                        <a href="img/Pomegranate.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.6s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Papaya.jpg" class="img-fluid w-100" alt="Papaya">
+                        <a href="img/Papaya.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Onion.png" class="img-fluid w-100" alt="Onion">
+                        <a href="img/Onion.png" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.8s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Mango.jpg" class="img-fluid w-100" alt="Mango">
+                        <a href="img/Mango.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Third Row -->
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.9s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Green_Cardamom.jpg" class="img-fluid w-100" alt="Green Cardamom">
+                        <a href="img/Green_Cardamom.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.0s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/ginger-paste.jpg" class="img-fluid w-100" alt="Ginger">
+                        <a href="img/ginger-paste.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.1s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/fruits.jpg" class="img-fluid w-100" alt="Fruits">
+                        <a href="img/fruits.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.2s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Cumin_Seeds.webp" class="img-fluid w-100" alt="Cumin Seeds">
+                        <a href="img/Cumin_Seeds.webp" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fourth Row -->
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.3s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Coriander.jpg" class="img-fluid w-100" alt="Coriander">
+                        <a href="img/Coriander.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.4s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Clove.jpg" class="img-fluid w-100" alt="Clove">
+                        <a href="img/Clove.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.5s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Chilli_Powder.jpg" class="img-fluid w-100" alt="Chilli Powder">
+                        <a href="img/Chilli_Powder.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.6s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/Black_pepper.jpg" class="img-fluid w-100" alt="Black Pepper">
+                        <a href="img/Black_pepper.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Fifth Row -->
+                <div class="col-md-3 col-sm-6 wow fadeIn" data-wow-delay="1.7s">
+                    <div class="position-relative overflow-hidden gallery-item">
+                        <img src="img/banana.jpg" class="img-fluid w-100" alt="Banana">
+                        <a href="img/banana.jpg" data-lightbox="product-gallery" class="gallery-icon">
+                            <i class="fa fa-eye"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery Section End -->
+
+    <!-- Contact Section Start -->
+    <div class="container-fluid contact py-5" style="background-color: #50C878;">
+        <div class="container">
+            <div class="row g-0">
+
+                <!-- LEFT SIDE CONTENT -->
+                <div class="col-lg-7 bg-light py-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="h-100 p-5">
+                        <h1 class="display-6 mb-4">Contact Us</h1>
+                        <p class="fs-5 mb-4">Feel free to get in touch with us for inquiries, support, or any help.
+                            We are always here to assist you.</p>
+
+                        <h5 class="mb-2"><i class="fa fa-phone text-primary me-2"></i> Phone:</h5>
+                        <p class="mb-4">+91 9819544552 | 9819355315</p>
+
+                        <h5 class="mb-2"><i class="fa fa-envelope text-primary me-2"></i> Email:</h5>
+                        <p class="mb-4">nveera1981@gmail.com</p>
+                        <h5 class="mb-2"><i class="fa fa-map-marker text-primary me-2"></i> Address:</h5>
+                        <p class="mb-0">701/702, SILVER AVENUE, DEVI DAYAL ROAD, BPS PLAZA COMPOUND, NEAR DEVI DAYAL
+                            BEST BUS DEPOT. MULUND -WEST, MUMBAI - 400080</p>
+                    </div>
+                </div>
+
+                <!-- RIGHT SIDE CONTACT FORM -->
+                <div class="col-lg-5 py-5 text-center wow fadeIn" data-wow-delay="0.3s"
+                    style="background-color: #D4AF37;">
+                    <div class="h-100 p-5">
+
+                        <form onsubmit="sendToWhatsApp(event)">
+                            <div class="row g-3">
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="cname" placeholder="Your Name"
+                                            required>
+                                        <label for="cname">Your Name</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="cemail" placeholder="Your Email"
+                                            required>
+                                        <label for="cemail">Your Email</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="cmessage" placeholder="Message"
+                                            style="height: 120px" required></textarea>
+                                        <label for="cmessage">Your Message</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button class="btn btn-light py-3 w-100" type="submit">Send on WhatsApp</button>
+                                </div>
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section End -->
+
+    <!-- Google Map -->
+    <div class="container-fluid p-0 mt-4">
+        <div class="container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15073.923294954613!2d72.93955670033237!3d19.1741902802359!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s701%2F702%2C%20SILVER%20AVENUE%2C%20DEVI%20DAYAL%20ROAD%2C%20BPS%20PLAZA%20COMPOUND%2C%20NEAR%20DEVI%20DAYAL%20BEST%20BUS%20DEPOT.%20MULUND%20-WEST%2C%20MUMBAI%20-%20400080!5e0!3m2!1sen!2sin!4v1765534782042!5m2!1sen!2sin"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+    <!-- Newsletter Start -->
+    <div class="container-fluid py-5 mt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #50C878;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-6 mb-4">Subscribe the Newsletter</h1>
+                    <div class="position-relative w-100 mb-2">
+                        <input class="form-control border-0 w-100 ps-4 pe-5" type="text" placeholder="Enter Your Email"
+                            style="height: 60px;">
+                        <button type="button"
+                            class="btn btn-lg-square shadow-none position-absolute top-0 end-0 mt-2 me-2"><i
+                                class="fa fa-paper-plane text-primary fs-4"></i></button>
+                    </div>
+                    <p class="mb-0 text-white">Don't worry, we won't spam you with emails.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter End -->
+
+    <!-- my test modal  -->
+    <div class="modal fade" id="enquiryModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Enquiry Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <form onsubmit="sendModalMessage(); return false;">
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <input type="text" id="name" class="form-control" placeholder="Enter your name"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" id="email" class="form-control" placeholder="Enter your email"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="tel" id="phone" class="form-control" placeholder="Enter your contact numer"
+                                    required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" id="subject" class="form-control" placeholder="Enter your subject"
+                                    required>
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="" id="message" rows="3" class="form-control"
+                                    placeholder="Enter your message" required></textarea>
+                            </div>
+
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-success w-100">
+                                    Send Message On Whatsapp
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- enquiry modal scripts -->
+    <script>
+        function sendModalMessage() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+
+            let num = "9819544552";
+
+            let whatsappLink = 'https://wa.me/' + num + '?text='
+                + encodeURIComponent(
+                    "Name : " + name + "\n"
+                    + "Email :" + email + '\n'
+                    + "Phone :" + phone + '\n'
+                    + "Subject :" + subject + '\n'
+                    + "Message :" + message + '\n'
+                );
+            window.open(whatsappLink, "_blank")
+        }
+    </script>
+
+    <!-- Footer Start -->
+    <div class="container-fluid  footer py-5 wow fadeIn" data-wow-delay="0.1s"
+        style="background-color: #D4AF37; color: #fff;">
+        <div class="container">
+            <div class="row g-5 py-5">
+
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">VEERA GLOBAL EXIM</h4>
+                    <p class="mb-2">
+                        VEERA GLOBAL EXIM is a professionally managed Export–Import, Domestic Trading & Global Sourcing
+                        Company delivering premium-quality products across India and international markets.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="">Home</a>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Products</a>
+                    <a class="btn btn-link" href="">Gallery</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                </div>
+
+                <!-- Address -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Address</h4>
+
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>
+                        701/702, SILVER AVENUE, DEVI DAYAL ROAD,
+                        BPS PLAZA COMPOUND, NEAR DEVI DAYAL BEST BUS DEPOT,
+                        MULUND - WEST, MUMBAI - 400080
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i>
+                        +91 9819544552 | +91 9819355315
+                    </p>
+
+                    <p class="mb-2">
+                        <i class="fa fa-envelope me-3"></i>
+                        nveera1981@gmail.com
+                    </p>
+                </div>
+
+                <!-- Social Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Social Links</h4>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-x-twitter text-white"
+                                style=""></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i
+                                class="fab fa-facebook-f text-white"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i class="fab fa-youtube text-white"></i></a>
+                        <a class="btn btn-square btn-primary me-2" href=""><i
+                                class="fab fa-linkedin-in text-white"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Copyright -->
+            <div class="copyright pt-4">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        © <a class="fw-semi-bold" href="#" style="color: #4169E1;">VEERA GLOBAL EXIM</a>, All Rights
+                        Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a class="fw-semi-bold" href="https://www.trade4export.com/"
+                            style="color: #4169E1;">Trade4Export</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- send message on whatsapp -->
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("cname").value;
+            var email = document.getElementById("cemail").value;
+            var message = document.getElementById("cmessage").value;
+
+            var phoneNumber = "919876543210"; // <-- Your WhatsApp Number (with country code)
+
+            var whatsappMessage =
+                "New Contact Form Message:%0A%0A" +
+                "Name: " + name + "%0A" +
+                "Email: " + email + "%0A" +
+                "Message: " + message;
+
+            var url = "https://wa.me/" + phoneNumber + "?text=" + whatsappMessage;
+
+            window.open(url, "_blank").focus();
+        }
+    </script>
+
+</body>
+
+</html>
