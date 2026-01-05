@@ -184,8 +184,7 @@
                     <div class="col-lg-6">
                         <div class="carousel-text">
                             <h1 class="display-1 text-uppercase mb-3">Nutritious Vegetables for All</h1>
-                            <p class="fs-5 mb-5">Providing fresh vegetables to families ensures healthy meals and a
-                                sustainable future for our communities.</p>
+                            <p class="fs-5 mb-5">We source, verify, and deliver high-quality Indian products to domestic & international markets with transparency, consistency, and professionalism.</p>
                             <div class="d-flex">
                                 <a class="btn  py-3 px-4 me-3" href=""
                                     style="background-color: #D4AF37; color: white;">Explore Our Products</a>
@@ -400,6 +399,7 @@
             <div class="mb-5">
                 <h2 class="mb-4 text-center">Fruits</h2>
                 <div class="row g-4 justify-content-center align-items-center text-center">
+
                     <div class="col-md-3 wow fadeIn" data-wow-delay="0.1s">
                         <div class="card h-100 text-center p-3">
                             <img src="img/Mango.jpg" height="250px" width="100%" class="card-img-top" alt="Mango">
@@ -411,6 +411,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-3 wow fadeIn" data-wow-delay="0.2s">
                         <div class="card h-100 text-center p-3">
                             <img src="img/banana.jpg" height="250px" width="100%" class="card-img-top" alt="Banana">
@@ -422,6 +423,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-3 wow fadeIn" data-wow-delay="0.3s">
                         <div class="card h-100 text-center p-3">
                             <img src="img/Pomegranate.jpg" height="250px" width="100%" class="card-img-top"
@@ -924,74 +926,71 @@
     </div>
     <!-- Newsletter End -->
 
-    <!-- my test modal  -->
-    <div class="modal fade" id="enquiryModal" tabindex="-1">
+    <!-- enquiry modal -->
+    <div class="modal" id="enquiryModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Enquiry Form</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <h5 class="modal-title">Enquiry Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
                 <div class="modal-body">
-                    <form onsubmit="sendModalMessage(); return false;">
-                        <div class="row g-3">
-
-                            <div class="col-md-6">
-                                <input type="text" id="name" class="form-control" placeholder="Enter your name"
-                                    required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" id="email" class="form-control" placeholder="Enter your email"
-                                    required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="tel" id="phone" class="form-control" placeholder="Enter your contact numer"
-                                    required>
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" id="subject" class="form-control" placeholder="Enter your subject"
-                                    required>
-                            </div>
+                    <form id="enquiryForm">
+                        <div class="row">
                             <div class="col-md-12">
-                                <textarea name="" id="message" rows="3" class="form-control"
-                                    placeholder="Enter your message" required></textarea>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" id="name" class="form-control" placeholder="Enter name"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" id="email" class="form-control" placeholder="Enter email"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="phone" id="phone" class="form-control" placeholder="Enter number"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" id="subject" class="form-control" placeholder="Enter subject"
+                                            required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea name="" id="message" class="form-control" placeholder="Enter message"
+                                            required></textarea>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="col-md-12 text-center">
-                                <button type="submit" class="btn btn-success w-100">
-                                    Send Message On Whatsapp
-                                </button>
-                            </div>
-
                         </div>
                     </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" id="sendEmailButton" class="btn btn-primary">Send via Email</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- enquiry modal scripts -->
+    <!-- script for sending enquiry email -->
     <script>
-        function sendModalMessage() {
-            let name = document.getElementById("name").value;
-            let email = document.getElementById("email").value;
-            let phone = document.getElementById("phone").value;
-            let subject = document.getElementById("subject").value;
-            let message = document.getElementById("message").value;
+        document.getElementById('sendEmailButton').addEventListener('click', function (e) {
+            e.preventDefault();
 
-            let num = "9819544552";
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
 
-            let whatsappLink = 'https://wa.me/' + num + '?text='
-                + encodeURIComponent(
-                    "Name : " + name + "\n"
-                    + "Email :" + email + '\n'
-                    + "Phone :" + phone + '\n'
-                    + "Subject :" + subject + '\n'
-                    + "Message :" + message + '\n'
-                );
-            window.open(whatsappLink, "_blank")
-        }
+            // Check if any of the fields are empty
+            if (!name || !email || !phone || !subject || !message) {
+                alert("Please fill all the fields");
+                return; // Exit the function if any field is empty
+            }
+
+            const mailtoLink = `mailto:nveera1981@gmail.com?subject=${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0APhone: ${encodeURIComponent(phone)}%0AMessage: ${encodeURIComponent(message)}`;
+            window.location.href = mailtoLink;
+        })
     </script>
 
     <!-- Footer Start -->
